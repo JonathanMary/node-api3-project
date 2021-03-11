@@ -40,7 +40,7 @@ function validateUser(req, res, next) {
 
 function validatePost(req, res, next) {
   // DO YOUR MAGIC
-  const { body } = req.body;
+  const body = req.body;
   try {
     if(Object.keys(body).length === 0) {
       res.status(400).json({ message: "missing post data" });
